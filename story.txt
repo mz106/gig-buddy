@@ -1,0 +1,37 @@
+
+The epic:
+
+The Problem:
+
+    User has spurflous for a gig. 
+
+User Need:
+
+    User wants to sell OR find a gig buddy. 
+
+Solutions:
+
+    1. Offer ticket sales/exchange service
+
+    2. Offer service to find a gig buddy
+
+For some reason we are going to tackle solution 2 first. 
+
+User stories:
+
+    As a user, I want to be able to <do something> to <solve this problem>.
+
+
+    1 User Story One:
+        As a user, I want be able to search geographically for potential gig buddies. 
+
+    3 User Story Two:
+        As a user, I want to be able to filter potential gig buddies on various criteria
+        (e.g. age range, musical taste etc. )
+
+    2 User Story Three:
+        As a user, I want to be able to show that I have a ticket available. 
+
+
+
+

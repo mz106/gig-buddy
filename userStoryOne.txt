@@ -1,0 +1,107 @@
+
+User Story One:
+
+As a user, I want to tell the app where the gig is. 
+
+As a user, I want to know if another user has a ticket for the same gig, or is 
+perpared to buy one. 
+
+As a user, I want to know if a potential gig buddy HAS bought a ticket if required. 
+
+1. As a user, I want to offer a potential gig buddy any spare tickets that I have. 
+
+1. As a user, I want to let others know I am in the market for a ticket for a particular gig. 
+
+
+
+        User sets up profile
+        Select gig with options:
+            I have a ticket and want a buddy without a ticket. 
+            I don't have a ticket and want a bubby with a ticket.
+
+
+
+gig-buddy api design
+
+    gig-search:
+
+    Nouns
+
+    gig, band name, time, location, date, support artists, seat location, gig duration, 
+    ticket level (e.g. vip), friend, connection, user, 
+
+    Verbs
+
+    find (e.g. a gig, buddy), search (e.g. a gig, buddy), connect (with a buddy), add (e.g. a ticket),
+    message, buy, sell, cancel, create(e.g. a user), join (e.g. a user), register
+
+    (N.B. join will be used in the FE to direct a user, register is route name in BE)
+    
+    BE (this recieves data from FE fetch from 'join' btn)
+
+    user model{
+        id: integer unique PK,
+        username: string unique,
+        email: string unique,
+        passwordHash: string, unique
+    }
+
+    from fetch_user_join
+    '/user/register':
+        method: "POST",
+        data: {
+            username
+            email
+            passwordHash
+        },
+
+    fetch_user_join
+    FE (this fetch fires on user 'join' btn click on join page)
+    '<url>/user/register':
+        method: "POST",
+        body: {
+            username,
+            email, 
+            password,
+        }
+
+    from fetch_user_login
+    '/user/login':
+        method: "POST",
+        data: {
+            username
+            passwordHash
+        },
+
+    fetch_user_login
+    FE (this fetch fires on user 'join' btn click on join page)
+    '<url>/user/login':
+        method: "POST",
+        body: {
+            username,
+            password,
+        }
+
+!!! The above is for teaching purposes/getting the ideas across. The below is all you need to get sorted
+for your project!!!
+
+
+user-routes
+    /user/register from fetch called fetch_user_register
+    /user/login from fetch called fetch_user_login
+
+gig-routes
+    /gig/addGig from fetch called fetch_add_gig
+    /gig/findOneGig
+    /gig/findAllGigs
+    /gig/updateAGig
+    /gig/deleteAGig
+
+
+
+
+
+
+
+
+
